@@ -1,107 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.android.travelapp.MainActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
     <RelativeLayout
-        android:id="@+id/img1"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="145dp"
-        >
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.android.travelapp.MainActivity">
 
-        <ImageView
+        <RelativeLayout
+            android:id="@+id/img1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/mallorca"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textSize="45sp"
-            android:gravity="center"
-            android:textStyle="italic"
-            android:textColor="#FFFFFF"
-            android:layout_height="wrap_content"
-            android:text="Mallorca" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_height="145dp"
             >
 
-        <ImageButton
-            android:src="@drawable/public_black"
-            android:background="#99FFFFFF"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"
-            />
-        <ImageButton
-            android:src="@drawable/share_black"
-            android:background="#99FFFFFF"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"
-            />
-        <ImageButton
-            android:src="@drawable/edit_black"
-            android:background="#99FFFFFF"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginRight="1dp"
-            />
-        </LinearLayout>
-    </RelativeLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/mallorca"
+                />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="145dp"
-        android:id="@+id/img2"
-        android:layout_below="@+id/img1"
-        android:layout_marginTop="15dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/madrid"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textSize="45sp"
-            android:gravity="center"
-            android:textStyle="italic"
-            android:textColor="#FFFFFF"
-            android:layout_height="wrap_content"
-            android:text="Madrid" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="45sp"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:text="Mallorca" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
 
             <ImageButton
                 android:src="@drawable/public_black"
@@ -127,131 +71,193 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:id="@+id/img2"
+            android:layout_below="@+id/img1"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/madrid"
                 />
 
-        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="45sp"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:text="Madrid" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
+
+                <ImageButton
+                    android:src="@drawable/public_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    />
+                <ImageButton
+                    android:src="@drawable/share_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    />
+                <ImageButton
+                    android:src="@drawable/edit_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:id="@+id/img3"
+            android:layout_below="@+id/img2"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/benasque"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="45sp"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:text="Benasque" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
+
+                <ImageButton
+                    android:src="@drawable/public_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    />
+                <ImageButton
+                    android:src="@drawable/share_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    />
+                <ImageButton
+                    android:src="@drawable/edit_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:id="@+id/img4"
+            android:layout_below="@+id/img3"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/sant_feliu"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="45sp"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:text="Sant Feliu" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
+
+                <ImageButton
+                    android:src="@drawable/public_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    />
+                <ImageButton
+                    android:src="@drawable/share_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    />
+                <ImageButton
+                    android:src="@drawable/edit_black"
+                    android:background="#99FFFFFF"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
     </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="145dp"
-        android:id="@+id/img3"
-        android:layout_below="@+id/img2"
-        android:layout_marginTop="15dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/benasque"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textSize="45sp"
-            android:gravity="center"
-            android:textStyle="italic"
-            android:textColor="#FFFFFF"
-            android:layout_height="wrap_content"
-            android:text="Benasque" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            >
-
-            <ImageButton
-                android:src="@drawable/public_black"
-                android:background="#99FFFFFF"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
-                />
-            <ImageButton
-                android:src="@drawable/share_black"
-                android:background="#99FFFFFF"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
-                />
-            <ImageButton
-                android:src="@drawable/edit_black"
-                android:background="#99FFFFFF"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                />
-
-        </LinearLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="145dp"
-        android:id="@+id/img4"
-        android:layout_below="@+id/img3"
-        android:layout_marginTop="15dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/sant_feliu"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textSize="45sp"
-            android:gravity="center"
-            android:textStyle="italic"
-            android:textColor="#FFFFFF"
-            android:layout_height="wrap_content"
-            android:text="Sant Feliu" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            >
-
-            <ImageButton
-                android:src="@drawable/public_black"
-                android:background="#99FFFFFF"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
-                />
-            <ImageButton
-                android:src="@drawable/share_black"
-                android:background="#99FFFFFF"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
-                />
-            <ImageButton
-                android:src="@drawable/edit_black"
-                android:background="#99FFFFFF"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                />
-
-        </LinearLayout>
-    </RelativeLayout>
-
-</RelativeLayout>
+</ScrollView>
