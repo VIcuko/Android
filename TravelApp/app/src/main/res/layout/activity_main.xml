@@ -17,9 +17,9 @@
         tools:context="com.example.android.travelapp.MainActivity">
 
         <RelativeLayout
-            android:id="@+id/img1"
             android:layout_width="match_parent"
             android:layout_height="145dp"
+            android:id="@+id/img1"
             >
 
             <ImageView
@@ -34,7 +34,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="45sp"
-                android:gravity="center"
                 android:textStyle="italic"
                 android:textColor="#FFFFFF"
                 android:layout_height="wrap_content"
@@ -74,6 +73,7 @@
                 android:layout_marginRight="1dp"
                 />
             </LinearLayout>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -88,14 +88,16 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 android:src="@drawable/madrid"
-                />
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/imageView" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="45sp"
-                android:gravity="center"
                 android:textStyle="italic"
                 android:textColor="#FFFFFF"
                 android:layout_height="wrap_content"
@@ -156,7 +158,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="45sp"
-                android:gravity="center"
                 android:textStyle="italic"
                 android:textColor="#FFFFFF"
                 android:layout_height="wrap_content"
@@ -217,7 +218,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="45sp"
-                android:gravity="center"
                 android:textStyle="italic"
                 android:textColor="#FFFFFF"
                 android:layout_height="wrap_content"
