@@ -7,11 +7,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int scoreTeamA = 0;
+    int scoreTeamB = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(4);
+        displayForTeamA(scoreTeamA);
     }
 
     /**
@@ -22,15 +25,59 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void threePoints(View view) {
-        displayForTeamA(3);
+    /**
+     * Displays the given score for Team A.
+     */
+    public void displayForTeamB(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        scoreView.setText(String.valueOf(score));
     }
 
-    public void twoPoints(View view) {
-        displayForTeamA(2);
+    /**
+     * Increase the score of Team A by 3.
+     */
+    public void threePointsTeamA(View view) {
+        scoreTeamA += 3;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void onePoint(View view) {
-        displayForTeamA(1);
+    /**
+     * Increase the score of Team B by 3.
+     */
+    public void threePointsTeamB(View view) {
+        scoreTeamB += 3;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /**
+     * Increase the score of Team A by 2.
+     */
+    public void twoPointsTeamA(View view) {
+        scoreTeamA += 2;
+        displayForTeamA(scoreTeamA);
+    }
+
+    /**
+     * Increase the score of Team B by 2.
+     */
+    public void twoPointsTeamB(View view) {
+        scoreTeamB += 2;
+        displayForTeamB(scoreTeamB);
+    }
+
+    /**
+     * Increase the score of Team A by 1.
+     */
+    public void onePointTeamA(View view) {
+        scoreTeamA += 1;
+        displayForTeamA(scoreTeamA);
+    }
+
+    /**
+     * Increase the score of Team B by 1.
+     */
+    public void onePointTeamB(View view) {
+        scoreTeamB += 1;
+        displayForTeamB(scoreTeamB);
     }
 }
