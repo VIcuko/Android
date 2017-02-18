@@ -51,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method is called when the minus button is clicked.
+     */
+    public void resetValues(View view) {
+        quantity = 0;
+        display(quantity);
+        displayMessage("");
+    }
+
+    /**
      * This method displays the given quantity value on the screen.
      */
     private void display(int number) {
