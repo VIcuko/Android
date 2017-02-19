@@ -6,8 +6,10 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    //  Tracks score for Team A
     int scoreTeamA = 0;
+
+    //  Tracks score for Team B
     int scoreTeamB = 0;
 
     @Override
@@ -80,4 +82,15 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamB += 1;
         displayForTeamB(scoreTeamB);
     }
+
+    /**
+     * Reset the result for both teams.
+     */
+    public void resetResult(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+    }
+
 }
