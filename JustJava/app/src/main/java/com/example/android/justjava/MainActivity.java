@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = calculatePrice(quantity, 15);
-        String priceMessage = "Total: " + price + " €" + "\nThank you!";
-        displayMessage(priceMessage);
+        int price = calculatePrice(quantity, 5);
+        String summary = createOrderSummary(price);
+        displayMessage(summary);
     }
 
     /**
@@ -93,5 +93,16 @@ public class MainActivity extends AppCompatActivity {
         int price = quantity * cupPrice;
         return price;
     }
+
+    /**
+     * Generates a summary message.
+     *
+     * @param price is the total price of the coffee ordered
+     */
+    private String createOrderSummary(int price) {
+        String summary = "Name: Jimmy Jones \nQuantity: " + quantity + "\nTotal: " + price + " €" + "\nThank you!";
+        return summary;
+    }
+
 
 }
