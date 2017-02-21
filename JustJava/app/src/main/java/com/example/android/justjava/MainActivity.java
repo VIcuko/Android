@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + amount);
     }
 
-
     /**
      * This method displays the given text on the screen.
      */
