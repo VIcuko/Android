@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        String priceMessage = "Total: " + quantity*5 + " €" + "\nThank you!";
+        int price = calculatePrice(quantity, 5);
+        String priceMessage = "Total: " + price + " €" + "\nThank you!";
         displayMessage(priceMessage);
     }
 
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void displayQuantity(int amount     ) {
+    private void displayQuantity(int amount) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + amount);
     }
@@ -81,6 +82,16 @@ public class MainActivity extends AppCompatActivity {
     private void displayMessage(String message) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
+    }
+
+    /**
+     * Calculates the price of the order.
+     *
+     * @param quantity is the number of cups of coffee ordered
+     */
+    private int calculatePrice(int quantity, int cupPrice) {
+        int price = quantity * cupPrice;
+        return price;
     }
 
 }
