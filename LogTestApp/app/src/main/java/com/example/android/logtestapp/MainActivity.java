@@ -1,7 +1,11 @@
-package com.example.android.logtestapp;
+package com.example.android.menu;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+
+import com.example.android.logtestapp.R;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +13,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void printToLogs(View view) {
+        // Find first menu item TextView and print the text to the logs
+
+        // Find second menu item TextView and print the text to the logs
+
+        // Find third menu item TextView and print the text to the logs
+
     }
 }
