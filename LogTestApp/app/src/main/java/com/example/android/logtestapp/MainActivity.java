@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
     public void printToLogs(View view) {
         // Find first menu item TextView and print the text to the logs
         TextView firstTextView = (TextView) findViewById(R.id.menu_item_1);
-        Log.i("First TextView content",(String) firstTextView.getText());
+        Log.v("MainActivity",firstTextView.getText().toString());
         // Find second menu item TextView and print the text to the logs
         TextView secondTextView = (TextView) findViewById(R.id.menu_item_2);
-        Log.i("Second TextView content",(String) secondTextView.getText());
+        Log.v("MainActivity",secondTextView.getText().toString());
         // Find third menu item TextView and print the text to the logs
         TextView thirdTextView = (TextView) findViewById(R.id.menu_item_3);
-        Log.i("Third TextView content",(String) thirdTextView.getText());
+        Log.v("MainActivity",thirdTextView.getText().toString());
     }
 }
