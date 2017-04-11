@@ -9,6 +9,7 @@ package com.example.android.justjava;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 /**
@@ -17,19 +18,21 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int quantity = 0;
+    CheckBox whippedCream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        whippedCream = (CheckBox) findViewById(R.id.hasWhippedCream);
     }
 
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = calculatePrice(quantity, 5);
-        String priceMessage = createOrderSummary(price);
+        int price = calculatePrice(quantity, 5, whippedCream.isChecked());
+        String priceMessage = createOrderSummary(price, whippedCream.isChecked());
         displayMessage(priceMessage);
     }
 
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param quantity is the number of cups of coffee ordered
      */
-    private int calculatePrice(int quantity, int cupPrice) {
+    private int calculatePrice(int quantity, int cupPrice, boolean hasWhippedCream) {
         int price = quantity * cupPrice;
         return price;
     }
@@ -90,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
      * @param price is the total price of the coffee ordered
      * @return the text summary
      */
-    private String createOrderSummary(int price) {
+    private String createOrderSummary(int price, boolean hasWhippedCream) {
         String summary = "Name: Jimmy Jones \nQuantity: " + quantity + "\nTotal: " + price + " €" + "\nThank you!";
         return summary;
     }
