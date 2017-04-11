@@ -18,21 +18,21 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int quantity = 0;
-    CheckBox whippedCream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        whippedCream = (CheckBox) findViewById(R.id.hasWhippedCream);
     }
 
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = calculatePrice(quantity, 5, whippedCream.isChecked());
-        String priceMessage = createOrderSummary(price, whippedCream.isChecked());
+        CheckBox whippedCreamCheckbox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
+        boolean haswhippedCream = whippedCreamCheckbox.isChecked();
+        int price = calculatePrice(quantity, 5, haswhippedCream);
+        String priceMessage = createOrderSummary(price, haswhippedCream);
         displayMessage(priceMessage);
     }
 
@@ -94,7 +94,11 @@ public class MainActivity extends AppCompatActivity {
      * @return the text summary
      */
     private String createOrderSummary(int price, boolean hasWhippedCream) {
-        String summary = "Name: Jimmy Jones \nQuantity: " + quantity + "\nTotal: " + price + " €" + "\nThank you!";
+        String summary = "Name: Jimmy Jones";
+        summary +="\nAdd whipped cream? " + hasWhippedCream;
+        summary += "\nQuantity: " + quantity;
+        summary += "\nTotal: " + price + " €";
+        summary += "\nThank you!";
         return summary;
     }
 
