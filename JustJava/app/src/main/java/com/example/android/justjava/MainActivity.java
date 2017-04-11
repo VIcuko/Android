@@ -91,8 +91,9 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Generates a summary message.
-     *
-     * @param price is the total price of the coffee ordered
+     * @param hasWhippedCream is whether or not the user wants whipped cream topping
+     * @param hasChocolate is whether or not the user wants whipped cream topping
+     * @param price of the order
      * @return the text summary
      */
     private String createOrderSummary(int price, boolean hasWhippedCream, boolean hasChocolate) {
